@@ -1,0 +1,104 @@
+/* ========================================================================== */
+/* ========================================================================== */
+							/* [Table of contents] */
+/* ========================================================================== */
+/* ========================================================================== */
+
+/*
+	
+		
+	+ Responsive
+		- min-width: 1200
+		- min-width: 992
+		- min-width: 768
+		- max-width: 1600
+		- max-width: 1366
+		- max-width: 1200
+		- min to max: 992 to 1199
+		- max-width: 991
+		- min to max: 768 to 991
+		- max-width: 767
+		- max-width: 639
+		- max-width: 479
+		- max-width: 360
+*/
+
+
+/*  */
+
+
+/* ========================================================================== */
+/* ========================================================================== */
+							/* [ + Responsive ] */
+/* ========================================================================== */
+/* ========================================================================== */
+/* - min-width: 1200 */
+@media (min-width: 1200px) {
+	
+}
+
+/* - min-width: 992 */
+@media (min-width: 992px) {
+	
+}
+
+
+/* - min-width: 768 */
+@media (min-width: 768px) {
+	
+}
+
+/* - max-width: 1600 */
+@media (max-width: 1600px) {
+	
+}
+
+/* - max-width: 1366 */
+@media (max-width: 1366px) {
+	
+}
+
+/* - max-width: 1200 */
+@media (max-width: 1200px) {
+	
+}	
+
+/* - min to max: 992 to 1199 */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+	
+}
+
+/* - max-width: 991 */
+@media (max-width: 991px) {
+	
+}
+
+/* - min to max: 768 to 991 */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+}
+
+/* - max-width: 767 */
+@media (max-width: 767px) {
+	
+}
+
+/* - max-width: 639 */
+@media (max-width: 639px) {
+	
+}
+
+/* - max-width: 568 */
+@media (max-width: 568px) {
+	
+}
+
+/* - max-width: 479 */
+@media (max-width: 479px) {
+	
+}
+
+/* - max-width: 360 */
+@media (max-width: 360px) {
+
+}
