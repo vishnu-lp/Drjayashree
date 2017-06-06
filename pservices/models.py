@@ -28,7 +28,9 @@ class Product(models.Model):
 class Appointments(models.Model):
 	Name = models.CharField(max_length=100,db_index=True)
 	ServiceName = models.ForeignKey(Service)
-	Age = models.IntegerField()	
-	Booking = models.DateTimeField()	
-	timestamp = models.DateField(auto_now_add=True)
+	Age = models.IntegerField(blank=True)
+	BookingD = models.DateField()
+	BookingT=models.TimeField()
+	Description=models.TextField(blank=True)
+	timestamp = models.DateField(auto_now_add=True, blank=True)
 
