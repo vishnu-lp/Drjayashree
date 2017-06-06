@@ -4,7 +4,7 @@ from .models import Appointments, Service
 class appointForm(forms.ModelForm):
     class Meta:
         model=Appointments
-        fields=['Name','ServiceName','Age','BookingD', 'BookingT']
+        fields=['Name','ServiceName','Age','Booking']
         # widgets = {
         #     'Booking': forms.DateTimeField()
         # }
