@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
@@ -17,30 +18,30 @@
 
 	<!-- Standard Favicon -->
 	<link rel="icon" type="image/x-icon" href="assets/images//favicon.ico" />
-	
+
 	<!-- For iPhone 4 Retina display: -->
 	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-114x114-precomposed.png">
-	
+
 	<!-- For iPad: -->
 	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-72x72-precomposed.png">
-	
+
 	<!-- For iPhone: -->
-	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-57x57-precomposed.png">	
-	
+	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-57x57-precomposed.png">
+
 	<!-- Library - Google Font Familys -->
 	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-	
+
 	<!-- Library -->
-    <link href="assets/css/lib.css" rel="stylesheet">    
-	
+    <link rel="stylesheet" href="{% static 'assets/css/lib.css' %}" >
+
 	<!-- Custom - Common CSS -->
-	<link href="assets/css/plugins.css" rel="stylesheet">
-	<link href="assets/css/elements.css" rel="stylesheet">	
-	<link href="assets/css/rtl.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="{% static 'assets/css/plugins.css' %}" >
+	<link href="{% static 'assets/css/elements.css' %} " rel="stylesheet">
+	<link href="{% static 'assets/css/rtl.css' %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
 
 	<!--[if lt IE 9]>
-		<script src="js/html5/respond.min.js"></script>
+		<script src="../static/assets/js/html5/respond.min.js"></script>
     <![endif]-->
 	
 </head>
@@ -80,110 +81,9 @@
 			</div><!-- Top Header /- -->
 			
 		</div><!-- SidePanel /- -->
-		
-		<!-- Ownavigation -->
-		<nav class="navbar ownavigation bg_black menu_color">
-			<!-- Container -->
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index-2.html"><img src="assets/images/logo.png" alt="logo"></a>
-				</div>
-				<div class="search">
-					<a href="javascript:void(0);" id="search" title="Search"><i class="fa fa-search"></i></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
-							<a href="index-2.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Services</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="aboutus.html" title="About">Vedic Vastu</a></li>
-								<li><a href="services.html" title="Services">Geo Pathology</a></li>
-								<li><a href="team.html" title="Team">Earth Sciences</a></li>
-								<li><a href="testimonial.html" title="Testimonial">EMR /EMF </a></li>
-								<li><a href="volunter-join.html" title="Volunteer join">Vedic Astrology</a></li>
-								<li><a href="donation.html" title="Donation">Nutrition and Diet</a></li>
-								<li><a href="signup.html" title="Sign Up">Cancer Research</a></li>
-								<li><a href="comming-soon.html" title="Comming Soon">Numerology</a></li>
-								<li><a href="404.html" title="404 Error">Chakra Research</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="gallery-masonry.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="gallery-masonry.html" title="Masonry Gallery L1">Maha Vastu Yantra</a></li>
-								<li><a href="gallery-large.html" title="Large Gallery L2 ">Energy Cast </a></li>
-								<li><a href="gallery-medium.html" title="Medium Gallery L3">SRI YANTRA</a></li>
-								<li><a href="gallery-small.html" title="Small Gallery L4">Gem Stones</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="event-home.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="event-home.html" title="Events All">Events All</a></li>
-								<li><a href="event-single.html" title="Events Details">Events Details</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Classic</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-left-sidebar.html" title="Blog Single Left Sidebar">Blog Classic Left Sidebar</a></li>
-										<li><a href="blog-right-sidebar.html" title="Blog Single Right Sidebar">Blog Classic Right Sidebar</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Grid</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-grid-2-col.html" title="Blog Grid 2 Column">Blog Grid 2 Column</a></li>
-										<li><a href="blog-grid-3-col.html" title="Blog Grid 3 Column">Blog Grid 3 Column</a></li>
-									</ul>
-								</li>
-								<li><a href="blog-fullwidth.html" title="Blog Full Wide">Blog Full Wide</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Single</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-single-left-sidebar.html" title="Blog Single Left Sidebar">Blog Single Left Sidebar</a></li>
-										<li><a href="blog-single-right-sidebar.html" title="Blog Single Right Sidebar">Blog Single Right Sidebar</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="contactus.html" title="Contact Us">Contact</a></li>
-					</ul>
-				</div>
-				<div id="loginpanel" class="desktop-hide">
-					<div class="right" id="toggle">
-						<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
-						<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
-					</div>
-				</div>
-				<!-- Search Box -->
-				<div class="search-box">
-					<span><i class="icon_close"></i></span>
-					<form><input type="text" class="form-control" placeholder="Enter a keyword and press enter..." /></form>
-				</div><!-- Search Box /- -->
-			</div><!-- Container /- -->
-		</nav><!-- Ownavigation /- -->
-		
+
+		{% include 'navbar.html' %}
+
 	</header><!-- Header Section /- -->
 	<!-- Main Container -->
 	<div class="main-container">
@@ -383,16 +283,16 @@
 	</footer><!-- Footer Main /- -->
 	
 	<!-- JQuery v1.12.4 -->
-	<script src="assets/js/jquery-1.12.4.min.js"></script>
+	<script src="../static/assets/js/jquery-1.12.4.min.js"></script>
 
 	<!-- Library - Js -->
-	<script src="assets/js/lib.js"></script>
-	
+	<script src="../static/assets/js/lib.js"></script>
+
 	<!-- Library - Google Map API -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW40y4kdsjsz714OVTvrw7woVCpD8EbLE"></script>
-	
+
 	<!-- Library - Theme JS -->
-	<script src="assets/js/functions.js"></script>
+	<script src="../static/assets/js/functions.js"></script>
 	
 </body>
 </html>

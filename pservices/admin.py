@@ -3,15 +3,19 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from .models import Service,Appointments
+from .models import Service,Appointments, Product
 # Register your models here.
 
 
 class ServiceAdmin(admin.ModelAdmin):
 	list_display = ['ServiceTitle']
 
-admin.site.register(Service,ServiceAdmin)
+class ProductAdmin(admin.ModelAdmin):
+	list_display = ['ProductTitle']
 
+
+admin.site.register(Service,ServiceAdmin)
+admin.site.register(Product, ProductAdmin)
 
 
 class AppointmentsAdmin(admin.ModelAdmin):

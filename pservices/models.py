@@ -15,6 +15,14 @@ class Service(models.Model):
 	def __str__(self):
 		return self.ServiceTitle
 
+class Product(models.Model):
+	ProductTitle = models.CharField(max_length=200,db_index=True)
+	ProductDescription = models.TextField(max_length=500,db_index=True)
+
+
+	def __str__(self):
+		return self.ProductTitle
+
 
 
 class Appointments(models.Model):

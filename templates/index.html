@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
 <!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
@@ -16,40 +18,43 @@
 	<title>Home - gplant</title>
 
 	<!-- Standard Favicon -->
-	<link rel="icon" type="image/x-icon" href="assets/images//favicon.ico" />
+	<link rel="icon" type="image/x-icon" href="../static/assets/images//favicon.ico" />
 	
 	<!-- For iPhone 4 Retina display: -->
-	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-114x114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-114x114-precomposed.png">
 	
 	<!-- For iPad: -->
-	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-72x72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-72x72-precomposed.png">
 	
 	<!-- For iPhone: -->
-	<link rel="apple-touch-icon-precomposed" href="assets/images//apple-touch-icon-57x57-precomposed.png">	
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-57x57-precomposed.png">
 	
 	<!-- Library - Google Font Familys -->
 	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 	
-	<link rel="stylesheet" type="text/css" href="assets/revolution/css/settings.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/settings.css' %}">
 	<!--link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css"-->
 	
 	<!-- RS5.3 Layers and Navigation Styles -->
-	<link rel="stylesheet" type="text/css" href="assets/revolution/css/layers.css">
-	<link rel="stylesheet" type="text/css" href="assets/revolution/css/navigation.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/layers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/navigation.css' %}">
 		
 	<!-- Library -->
-    <link href="assets/css/lib.css" rel="stylesheet">    
+    <link rel="stylesheet" href="{% static 'assets/css/lib.css' %}" >
 	
 	<!-- Custom - Common CSS -->
-	<link href="assets/css/plugins.css" rel="stylesheet">
-	<link href="assets/css/elements.css" rel="stylesheet">	
-	<link href="assets/css/rtl.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="{% static 'assets/css/plugins.css' %} " rel="stylesheet">
+	<link href="{% static 'assets/css/elements.css' %} " rel="stylesheet">
+	<link href="{% static 'assets/css/rtl.css' %}" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
 
 	<!--[if lt IE 9]>
-		<script src="js/html5/respond.min.js"></script>
+		<script src="../static/assets/js/html5/respond.min.js"></script>
     <![endif]-->
+
+
+
 	
 </head>
 
@@ -89,117 +94,9 @@
 			
 		</div><!-- SidePanel /- -->
 		
-		<!-- Ownavigation -->
-		<nav class="navbar ownavigation bg_black menu_color">
-			<!-- Container -->
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-				</div>
-				<div class="donation-btn">
-					<a class="bg_green tc_white tc_green_h bg_white_h" href="#" title="Donate Now">Donate Now</a>
-				</div>
-				<div class="search">
-					<a href="javascript:void(0);" id="search" title="Search"><i class="fa fa-search"></i></a>
-				</div>
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="dropdown active">
-							<a href="index.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="index.html" title="Home 1">Home 1</a></li>
-								<li><a href="index-2.html" title="Home 2">Home 2</a></li>
-								<li><a href="index-3.html" title="Home 3">Home 3</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="aboutus.html" title="About">About</a></li>
-								<li><a href="services.html" title="Services">Services</a></li>
-								<li><a href="team.html" title="Team">Team</a></li>
-								<li><a href="testimonial.html" title="Testimonial">Testimonial</a></li>
-								<li><a href="volunter-join.html" title="Volunteer join">Volunteer join</a></li>
-								<li><a href="donation.html" title="Donation">Donation</a></li>
-								<li><a href="signup.html" title="Sign Up">Sign Up</a></li>
-								<li><a href="comming-soon.html" title="Comming Soon">Comming Soon</a></li>
-								<li><a href="404.html" title="404 Error">404 Error</a></li>
-								<li><a href="faq.html" title="FAQs Page">FAQs Page</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="gallery-masonry.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Gallery</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="gallery-masonry.html" title="Masonry Gallery L1">Masonry Gallery L1</a></li>
-								<li><a href="gallery-large.html" title="Large Gallery L2 ">Large Gallery L2 </a></li>
-								<li><a href="gallery-medium.html" title="Medium Gallery L3">Medium Gallery L3</a></li>
-								<li><a href="gallery-small.html" title="Small Gallery L4">Small Gallery L4</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="event-home.html" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Event</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li><a href="event-home.html" title="Events All">Events All</a></li>
-								<li><a href="event-single.html" title="Events Details">Events Details</a></li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-							<i class="ddl-switch fa fa-angle-down"></i>
-							<ul class="dropdown-menu">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Classic</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-left-sidebar.html" title="Blog Single Left Sidebar">Blog Classic Left Sidebar</a></li>
-										<li><a href="blog-right-sidebar.html" title="Blog Single Right Sidebar">Blog Classic Right Sidebar</a></li>
-									</ul>
-								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Grid</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-grid-2-col.html" title="Blog Grid 2 Column">Blog Grid 2 Column</a></li>
-										<li><a href="blog-grid-3-col.html" title="Blog Grid 3 Column">Blog Grid 3 Column</a></li>
-									</ul>
-								</li>
-								<li><a href="blog-fullwidth.html" title="Blog Full Wide">Blog Full Wide</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">Blog Single</a>
-									<i class="ddl-switch fa fa-angle-down"></i>
-									<ul class="dropdown-menu">
-										<li><a href="blog-single-left-sidebar.html" title="Blog Single Left Sidebar">Blog Single Left Sidebar</a></li>
-										<li><a href="blog-single-right-sidebar.html" title="Blog Single Right Sidebar">Blog Single Right Sidebar</a></li>
-									</ul>
-								</li>
-							</ul>
-						</li>
-						<li><a href="contactus.html" title="Contact Us">Contact</a></li>
-					</ul>
-				</div>
-				<div id="loginpanel" class="desktop-hide">
-					<div class="right" id="toggle">
-						<a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
-						<a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
-					</div>
-				</div>
-				<!-- Search Box -->
-				<div class="search-box">
-					<span><i class="icon_close"></i></span>
-					<form><input type="text" class="form-control" placeholder="Enter a keyword and press enter..." /></form>
-				</div><!-- Search Box /- -->
-			</div><!-- Container /- -->
-		</nav><!-- Ownavigation /- -->
+
+				{% include 'navbar.html' %}
+
 		
 	</header><!-- Header Section /- -->
 	
@@ -215,7 +112,7 @@
 					<div id="home-slider1" class="rev_slider" data-version="5.3">
 						<ul>
 							<li>
-								<img src="assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="../static/assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<div class="tp-caption tp-resizeme men-img" id="slide-1-layer-0" 
 									data-x="['left','left','left','left']" data-hoffset="['30','30','15','15']" 
 									data-y="['top','top','top','top']" data-voffset="['30','30','15','15']" 
@@ -227,7 +124,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-1-layer-1" 
 									data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
@@ -240,7 +137,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-1-layer-2" 
 									data-x="['left','left','left','left']" data-hoffset="['30','30','15','15']" 
@@ -252,7 +149,7 @@
 									data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-1-layer-3" 
 									data-x="['left','left','left','left']" data-hoffset="['365','205','165','100']" 
@@ -264,7 +161,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-1-layer-4" 
 									data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
@@ -276,7 +173,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme rs-parallaxlevel-0 tc_dark" id="slide-1-layer-5" 
 									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
@@ -362,7 +259,7 @@
 							</li>
 							
 							<li>
-								<img src="assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="../static/assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<div class="tp-caption tp-resizeme men-img" id="slide-2-layer-0" 
 									data-x="['left','left','left','left']" data-hoffset="['30','30','15','15']" 
 									data-y="['top','top','top','top']" data-voffset="['30','30','15','15']" 
@@ -374,7 +271,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-2-layer-1" 
 									data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
@@ -387,7 +284,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-2-layer-2" 
 									data-x="['left','left','left','left']" data-hoffset="['30','30','15','15']" 
@@ -399,7 +296,7 @@
 									data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-2-layer-3" 
 									data-x="['left','left','left','left']" data-hoffset="['365','205','165','100']" 
@@ -411,7 +308,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-2-layer-4" 
 									data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
@@ -423,7 +320,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme rs-parallaxlevel-0 tc_dark" id="slide-2-layer-5" 
 									data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
@@ -509,7 +406,7 @@
 							</li>
 							
 							<li>
-								<img src="assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+								<img src="../static/assets/images/dummy.png" alt="slider" style="background-color: #f1f1f1;" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="10" class="rev-slidebg" data-no-retina>
 								<div class="tp-caption tp-resizeme men-img" id="slide-3-layer-0" 
 									data-x="['left','left','left','left']" data-hoffset="['30','30','15','15']" 
 									data-y="['top','top','top','top']" data-voffset="['30','30','15','15']" 
@@ -521,7 +418,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-cloud.png" alt="" width="366" height="248" data-ww="['366px','196px','147px','92px']" data-hh="['248px','133px','100px','62px']" data-no-retina>
 								</div>
 								<div class="tp-caption tp-resizeme men-img" id="slide-3-layer-1" 
 									data-x="['right','right','right','right']" data-hoffset="['0','0','0','0']" 
@@ -534,7 +431,7 @@
 									data-transform_out="opacity:0;s:1500;e:Power4.easeIn;s:1500;e:Power4.easeIn;" 
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-branch.png" alt="" width="471" height="233" data-ww="['471px','251px','188px','118px']" data-hh="['233px','124px','93px','58px']" data-no-retina>
 								</div>
 								
 								<div class="tp-caption tp-resizeme men-img" id="slide-3-layer-2" 
@@ -547,7 +444,7 @@
 									data-frames='[{"from":"z:0;rX:0deg;rY:0;rZ:0;sX:1.5;sY:1.5;skX:0;skY:0;opacity:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"				
-									style="z-index: 7;"><img src="assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-leaf.png" alt="" width="295" height="210" data-ww="['295px','157px','118px','74px']" data-hh="['210px','112px','84px','53px']" data-no-retina>
 								</div>
 								
 								<div class="tp-caption tp-resizeme men-img" id="slide-3-layer-3" 
@@ -560,7 +457,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-teapot.png" alt="" width="366" height="241" data-ww="['366px','195px','146px','92px']" data-hh="['241px','128px','96px','61px']" data-no-retina>
 								</div>
 								
 								<div class="tp-caption tp-resizeme men-img" id="slide-3-layer-4" 
@@ -573,7 +470,7 @@
 									data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","speed":2000,"to":"o:1;","delay":750,"ease":"Power4.easeInOut"},{"delay":"wait","speed":1000,"to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
 									data-start="900" 
 									data-responsive_offset="on"
-									style="z-index: 7;"><img src="assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina> 
+									style="z-index: 7;"><img src="../static/assets/images/slide-1-tree.png" alt="" width="376" height="287" data-ww="['376px','201px','150px','94px']" data-hh="['287px','153px','114px','72px']" data-no-retina>
 								</div>
 								
 								<div class="tp-caption tp-resizeme rs-parallaxlevel-0 tc_dark" id="slide-3-layer-5" 
@@ -678,7 +575,7 @@
 					</div><!-- Section Header /- -->
 					<div class="welcome-content">
 						<div class="welcome-bg">
-							<i><img src="assets/images/welcome-1-img.png" alt="Image" /></i>
+							<i><img src="../static/assets/images/welcome-1-img.png" alt="Image" /></i>
 						</div>
 						<!-- Row -->
 						<div class="row">						
@@ -1240,19 +1137,19 @@
 					</div><!-- Section Header /- -->
 					<div class="client-carousel">
 						<div class="item">
-							<a href="#"><img src="assets/images/client-logo-1.jpg" alt="Client Logo" /></a>
+							<a href="#"><img src="../static/assets/images/client-logo-1.jpg" alt="Client Logo" /></a>
 						</div>
 						<div class="item">
-							<a href="#"><img src="assets/images/client-logo-2.jpg" alt="Client Logo" /></a>
+							<a href="#"><img src="../static/assets/images/client-logo-2.jpg" alt="Client Logo" /></a>
 						</div>
 						<div class="item">
-							<a href="#"><img src="assets/images/client-logo-3.jpg" alt="Client Logo" /></a>
+							<a href="#"><img src="../static/assets/images/client-logo-3.jpg" alt="Client Logo" /></a>
 						</div>
 						<div class="item">
-							<a href="#"><img src="assets/images/client-logo-4.jpg" alt="Client Logo" /></a>
+							<a href="#"><img src="../static/assets/images/client-logo-4.jpg" alt="Client Logo" /></a>
 						</div>
 						<div class="item">
-							<a href="#"><img src="assets/images/client-logo-5.jpg" alt="Client Logo" /></a>
+							<a href="#"><img src="../static/assets/images/client-logo-5.jpg" alt="Client Logo" /></a>
 						</div>
 					</div>
 				</div><!-- Container /- -->
@@ -1274,7 +1171,7 @@
 					<!-- Widget About -->
 					<div class="col-md-3 col-sm-6 col-xs-6">
 						<aside class="widget widget_about">
-							<a href="index.html"><img src="assets/images/logo.png" alt="Logo" /></a>
+							<a href="index.html"><img src="../static/assets/images/logo.png" alt="Logo" /></a>
 							<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.  Pellentesque suscipit ante at ullamcorper. Etiam sit amet fringilla lacus.</p>
 							<aside class="widget widget_social">
 								<ul>
@@ -1353,22 +1250,22 @@
 	</footer><!-- Footer Main /- -->
 	
 	<!-- JQuery v1.12.4 -->
-	<script src="assets/js/jquery-1.12.4.min.js"></script>
+	<script src=" {% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
 
 	<!-- Library - Js -->
-	<script src="assets/js/lib.js"></script>
+	<script src="{% static 'assets/js/lib.js' %}"></script>
 	
 	<!-- RS5.3`````` Core JS Files -->
-	<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-	<script type="text/javascript" src="assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
 	
 	<!-- Library - Theme JS -->
-	<script src="assets/js/functions.js"></script>
+	<script src="{% static 'assets/js/functions.js' %}"></script>
 	
 </body>
 </html>
