@@ -29,8 +29,8 @@ class Appointments(models.Model):
 	Name = models.CharField(max_length=100,db_index=True)
 	ServiceName = models.ForeignKey(Service)
 	Age = models.IntegerField(blank=True)
-	BookingD = models.DateField()
-	BookingT= models.TimeField()
+	BookingD = models.DateField(default="2017-01-01")
+	BookingT= models.TimeField(default="00:00:00")
 	Description=models.TextField(blank=True)
 	timestamp = models.DateField(auto_now_add=True, blank=True)
 
