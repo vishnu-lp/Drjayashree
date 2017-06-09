@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 {% load staticfiles %}
 <!DOCTYPE html>
 <!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
@@ -137,64 +138,18 @@
 {#							</div>#}
 {#						</div>#}
 						<div class="col-md-6 col-md-offset-3 text-center contact-form">
-							<h3>Book an Appointment</h3>
-{#                            {% if form.has_errors %}#}
-{#                                {{ form.errors }}#}
-{#                            {% endif %}#}
+							<h3 style="font-size:32px; ">Book an <span style="color:#01c26e;">Appointment</span></h3>
                             <form method="POST">{% csrf_token %}
-                                {{ form.as_p }}
-
-                                <div class="container">
-
-
-                                <input type="submit" class="bg_green tc_white bg_black_h" value="submit">
+                                {{form|crispy}}
+                                <br>
+                                <input type="submit" class="bg_green tc_white bg_black_h" style="border-radius:25px;"value="submit">
                             </form>
-{#                            {% for field in form %}#}
-{#                            <fieldset class="form-group">#}
-{#                              <label class="control-label" >{{ field.label }}</label>#}
-{#                                <div>#}
-{#                                  <input type="text" class="form-control"#}
-{#                                    name="{{ field.name }}"#}
-{#                                    value="{{ field.value }}" >#}
-{#                                    </div>#}
-{#                            </fieldset>#}
-{#                            {% endfor %}#}
+                            <br>
+                            <br>
 
 
 
-{#                            <form class="row customForm" method="POST" action="">{% csrf_token %}#}
-{#                                    <table>#}
-{#                                        {{ form.as_p }}#}
-{#                                    </table>#}
-{#                                <div class="col-md-12 form-group">#}
-{#									<input type="submit" class="bg_green tc_white bg_black_h" value="submit" id="btn_submit" />#}
-{#								</div>#}
-{#                                    <input class="btn btn-default" type="submit" value="Add Song">#}
-{#                            </form>#}
-
-{#							<form class="row">#}
-{#								<div class="col-md-6 form-group">#}
-{#									<input type="text" class="form-control tc_dove_gray" placeholder="First Name"  name="contact-fname" id="input_fname" />#}
-{#								</div>#}
-{#								<div class="col-md-6 form-group">#}
-{#									<input type="text" class="form-control tc_dove_gray" placeholder="Last Name"  name="contact-lname" id="input_lname" />#}
-{#								</div>#}
-{#								<div class="col-md-12 form-group">#}
-{#									<input type="text" class="form-control tc_dove_gray" placeholder="Email"  name="contact-email" id="input_email" />#}
-{#								</div>#}
-{#								<div class="col-md-12 form-group">#}
-{#									<input type="text" class="form-control tc_dove_gray" placeholder="Website"  name="contact-website" id="input_website" />#}
-{#								</div>#}
-{#								<div class="col-md-12 form-group">#}
-{#									<textarea class="form-control tc_dove_gray" placeholder="Your Message"  name="textarea-message" id="textarea_message"></textarea>#}
-{#								</div>#}
-{#								<div class="col-md-12 form-group">#}
-{#									<input type="submit" class="bg_green tc_white bg_black_h" value="submit" id="btn_submit" />#}
-{#								</div>#}
-{#								<div id="alert-msg" class="alert-msg"></div>#}
-{#							</form>#}
 						</div>
-{#					</div><!-- Row /- -->#}
 				</div><!-- Container /- -->
 			</div><!-- Contact content /- -->
 
@@ -327,6 +282,28 @@
 
 	<!-- Library - Theme JS -->
 	<script src="../static/assets/js/functions.js"></script>
+
+    <style>
+        form label{
+            font-size: 24px;
+
+        }
+
+        #id_Name,#id_ServiceName,#id_Age,#id_BookingD_month,#id_BookingT,#id_BookingD_day,#id_BookingD_year{
+            border-radius: 25px;
+        }
+    </style>
+
+    <script>
+        $("[for='id_Name']").html('Name:');
+        $("[for='id_ServiceName']").html('Service Name:');
+        $("[for='id_Age']").html('Age:');
+        $("[for='id_BookingD_month']").html('Booking Date:');
+        $("[for='id_BookingT']").html('Booking Time:');
+        $("[name='BookingT']").attr("placeholder", "Format- hh:mm:ss");
+    </script>
+
+
 
 </body>
 </html>

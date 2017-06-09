@@ -19,6 +19,6 @@ admin.site.register(Product, ProductAdmin)
 
 
 class AppointmentsAdmin(admin.ModelAdmin):
-	list_display = ['Name','ServiceName','Age','timestamp','Booking']
+	list_display = ['Name','ServiceName','Age','timestamp','BookingD','BookingT']
 
 admin.site.register(Appointments,AppointmentsAdmin)

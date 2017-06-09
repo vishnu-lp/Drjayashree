@@ -2,9 +2,11 @@ from django import forms
 from .models import Appointments, Service
 
 class appointForm(forms.ModelForm):
+    BookingD=forms.DateField(widget=forms.SelectDateWidget(attrs={'class': 'dateselect'}))
+
     class Meta:
         model=Appointments
-        fields=['Name','ServiceName','Age','Booking']
+        fields=['Name','ServiceName','Age','BookingD','BookingT']
         # widgets = {
         #     'Booking': forms.DateTimeField()
         # }
@@ -21,4 +23,4 @@ class appointForm(forms.ModelForm):
 #     ServiceName = forms.ModelChoiceField(queryset=Service.objects.all())
 #     Age = forms.IntegerField()
 #     Booking = forms.DateTimeField()
-#     # Description = forms.TextField()
+#     Description = forms.TextField()
