@@ -1,3 +1,60 @@
+<!--
+About us, 
+Donors
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 10001;
+}
+
+
+#loading-animation {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 45%;
+    top: 28%;
+    background-image: url(img/logo1.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -60px 0 0 -64px;
+}
+
+
+/*====================================
+            Preloader
+======================================*/
+
+$(window).load(function() {
+
+    var preloaderDelay = 1500,
+        preloaderFadeOutTime = 2500;
+
+    function hidePreloader() {
+        var loadingAnimation = $('#loading-animation'),
+            preloader = $('#preloader');
+
+        loadingAnimation.fadeOut(preloaderFadeOutTime);
+        preloader.delay(preloaderDelay).fadeOut(1500);
+    }
+
+    hidePreloader();
+
+});
+
+
+
+-->
+
+
+
+
 {% load staticfiles %}
 
 <!DOCTYPE html>
@@ -40,14 +97,18 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/layers.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/navigation.css' %}">
 		
-	<!-- Library -->
-    <link rel="stylesheet" href="{% static 'assets/css/lib.css' %}" >
-	
-	<!-- Custom - Common CSS -->
+
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/lib.css' %}" >
+
+    <!-- Custom - Common CSS -->
 	<link href="{% static 'assets/css/plugins.css' %} " rel="stylesheet">
 	<link href="{% static 'assets/css/elements.css' %} " rel="stylesheet">
 	<link href="{% static 'assets/css/rtl.css' %}" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Library -->
+
 
 	<!--[if lt IE 9]>
 		<script src="../static/assets/js/html5/respond.min.js"></script>
@@ -65,40 +126,8 @@
 			<div class="line-scale-pulse-out"><div></div><div></div><div></div><div></div><div></div></div>
 		</div>
 	</div><!-- Loader /- -->
-	
-	<!-- Header Section -->
-	<header class="header_s header_s1">
-		<!-- SidePanel -->
-		<div id="slidepanel">
-			
-			<!-- Top Header -->
-			<div class="container-fluid no-right-padding no-left-padding top-header brd_color_green">
-				<!-- Container -->
-				<div class="container">						
-					<div class="top-left tcp_gray">
-						<p><i class="fa fa-home"></i>Dhaka, Bangladesh</p>
-						<p><i class="fa fa-phone tc_gray"></i><a class="tc_gray tc_green_h" href="tel:+8801532987039">+ 8801532-987039</a></p>
-					</div>
-					<div class="top-right">
-						<ul>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-vimeo-square"></i></a></li>
-						</ul>
-						<p><i class="fa fa-key tc_dark"></i><a class="tc_dark tc_green_h" href="#" title="Login">Login</a></p>
-						<p><i class="fa fa-user tc_dark"></i><a class="tc_dark tc_green_h" href="#" title="Signup">Signup</a></p>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Top Header /- -->
-			
-		</div><!-- SidePanel /- -->
-		
 
 				{% include 'navbar.html' %}
-
-		
-	</header><!-- Header Section /- -->
 	
 	<!-- Main Container -->
 	<div class="main-container">
@@ -565,137 +594,38 @@
 			</div><!-- Slider Section -->
 			
 			<!-- Welcome Section -->
-			<div class="container-fluid no-left-padding no-right-padding welcome-section">
+			<div class="container-fluid no-left-padding no-right-padding no-top-padding welcome-section">
 				<!-- Container -->
 				<div class="container">
 					<!-- Section Header -->
 					<div class="section-header tcp_gray">
-						<h3 class="tc_dark tcspan_green">welcome to <span>DrJayshree</span></h3>
-						<p>Our pulp Organization is one of the non profit organization near you.</p>
+<!--						<h3 class="tc_dark tcspan_green welcomeText">Welcome to <span class="font_blue">Dr. Jayshree</span></h3>-->
+						<p>Heyam duhkham anagatam</p>
 					</div><!-- Section Header /- -->
 					<div class="welcome-content">
 						<div class="welcome-bg">
-							<i><img src="../static/assets/images/welcome-1-img.png" alt="Image" /></i>
+							<i><img src="../static/assets/images/mandla.png" alt="Image" /></i>
 						</div>
 						<!-- Row -->
-						<div class="row">						
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-tencent-weibo bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark">Eco Ideas</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-1" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-1">
-										<h3 class="tc_dark">Eco Ideas</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-sun-o bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark tc_green_h">Solar Energy</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-2" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-2">
-										<h3 class="tc_dark">Solar Energy</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>						
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-recycle bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark tc_green_h">RECYCLING</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-3" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-3">
-										<h3 class="tc_dark">RECYCLING</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-pagelines bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark tc_green_h">Saving Forests</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-4" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-4">
-										<h3 class="tc_dark">Saving Forests</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>						
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-tint bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark tc_green_h">CLEAN WATER</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-5" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-5">
-										<h3 class="tc_dark">CLEAN WATER</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6 col-xs-6">
-								<div class="welcome-box tcp_gray2">
-									<i class="fa fa-ban bg_white brd_color_gray3 tc_gray3"></i>
-									<h3 class="tc_dark tc_green_h">Stop Pollution</h3>
-									<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-									<a href="#ow_wel-6" class="mfp-content tc_dark tc_green_h">Read More</a>
-									<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-6">
-										<h3 class="tc_dark">Stop Pollution</h3>
-										<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-									</div>
-								</div>
-							</div>
+						<div class="row">
+						
+                            {% for obj in prodList %}
+                                <div class="col-md-6 col-xs-6">
+                                    <a href="{%url 'pDetail'  id=obj.id  %}">
+                                    <div class="welcome-box tcp_gray2">
+                                        <h3 class="tc_dark">{{obj.ProductTitle}}</h3>
+                                        <p>{{obj.ProductDescription|safe|truncatechars:100}}</p>
+                                    </div>
+                                    </a>
+                                </div>
+							{% endfor %}
+							
+
 						</div><!-- Row /- -->
 						<div class="clearfix"></div>
-						<div class="view-more">
-							<a href="#"  data-toggle="modal" data-target=".more-services" class="tc_white bg_green tc_white_h bg_black_h">view more</a>
-						</div>
 					</div>
 				</div><!-- Container /- -->
-				<div class="modal fade bs-example-modal-lg more more-services" tabindex="-1" role="dialog" aria-hidden="true">
-					<div class="modal-dialog modal-lg">
-						<div class="modal-header">
-							<button type="button" class="close tc_white bg_green" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-							<h4 class="modal-title" id="myModalLabel">ECO System</h4>
-						</div>
-						<div class="modal-content">
-							<div class="container">
-								<div class="welcome-popup">
-									<div class="col-md-6 col-sm-6 col-xs-12">
-										<div class="welcome-box tcp_gray2">
-											<i class="fa fa-tint bg_white brd_color_gray3 tc_gray3"></i>
-											<h3 class="tc_dark">CLEAN WATER</h3>
-											<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-											<a href="#ow_wel-7" class="mfp-content tc_dark tc_green_h">Read More</a>
-											<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-7">
-												<h3 class="tc_dark">CLEAN WATER</h3>
-												<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-12">
-										<div class="welcome-box tcp_gray2">
-											<i class="fa fa-tint bg_white brd_color_gray3 tc_gray3"></i>
-											<h3 class="tc_dark">CLEAN WATER</h3>
-											<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor.</p>
-											<a href="#ow_wel-8" class="mfp-content tc_dark tc_green_h">Read More</a>
-											<div class="zoom-anim-dialog mfp-hide small-dialog" id="ow_wel-8">
-												<h3 class="tc_dark">CLEAN WATER</h3>
-												<p>Etiam sit amet fringilla lacus. Pelle tesque suscipit ante at ullamcorper pulvinar neque porttitor. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum. Vestialum ac diam sit amet quamveh icula elementum.</p>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				
 			</div><!-- Welcome Section /- -->
 			
 			<!-- Join Us Section -->
@@ -720,15 +650,15 @@
 {#			</div><!-- Join Us Section /- -->#}
 			
 			<!-- Gallery Section -->
-			<div class="container-fluid no-left-padding no-right-padding gallery-main gallery-section gallery-masonry">
+			<div class="container-fluid no-left-padding no-top-padding no-right-padding gallery-main gallery-section gallery-masonry">
 				<!-- Container -->
 				<div class="container">
 					<!-- Section Header -->
 					<div class="section-header tcp_gray">
-						<h3 class="tc_dark tcspan_green">OUR PHOTO <span>GALLERY</span></h3>
+						<h3 class="tc_dark tcspan_green">OUR <span class="font_blue">SERVICES</span></h3>
 						<p>Our pulp Organization is one of the non profit organization near you.</p>
 					</div><!-- Section Header /- -->
-					<!-- Gallery Filter -->
+					<!-- Gallery Filter 
 					<div class="gallery-category">
 						<ul id="filters">
 							<li><a class="active tc_dark tc_dark_h" data-filter="*" href="#" title="Show All">SHOW ALL</a></li>
@@ -737,11 +667,12 @@
 							<li><a class="tc_dark tc_dark_h" data-filter=".photography" href="#" title="Photography">photography</a></li>
 							<li><a class="tc_dark tc_dark_h" data-filter=".species" href="#" title="Species">Species</a></li>
 						</ul>
-					</div><!-- Gallery Filter /- -->
+					</div> Gallery Filter /- -->
+<!--
 					<div class="row gallery-list">
 						<div class="col-md-4 col-xs-6 gallery-box no-padding environment">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x370" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x370"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -750,7 +681,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding climate">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x285" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x285"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -759,7 +690,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding photography">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x285" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x285"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -768,7 +699,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding climate">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x370" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x370"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -777,7 +708,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding species">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x269" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x269"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -786,7 +717,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding photography">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x259" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x259"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -795,7 +726,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding climate">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x266" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x266"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -804,7 +735,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding environment">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x285" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x285"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -813,7 +744,7 @@
 						</div>
 						<div class="col-md-4 col-xs-6 gallery-box no-padding species">
 							<div class="gallery-content">
-								<i><img src="http://placehold.it/382x285" alt="Gallery" /></i>
+								<i><img src="http://placehold.it/350x350" alt="Gallery" /></i>
 								<div class="gallery-detail">
 									<a class="zoom" href="http://placehold.it/382x285"><i class="fa fa-picture-o"></i></a>
 									<a href="#"><i class="fa fa-link"></i></a>
@@ -821,38 +752,61 @@
 							</div>
 						</div>
 					</div>
-					<div class="clearfix"></div>
-					<div class="container-fluid view-more">
-						<a class="bg_green bg_black_h tc_white tc_white_h" href="#" title="View More">view more</a>
+-->
+
+					<div class="container-fluid">
+					    <div class="col-md-12">
+							{% for obj in servList %}
+							<div class="col-md-4 col-xs-12">
+								<div class="col-md-12">
+									<img src='{% static "assets/images/"|add:obj.ServiceImage %}' alt="image-missing" class="img-responsive img-rounded">
+								</div>
+								<div class="col-md-12">
+									<a href="{% url "sDetail" id=obj.id %}" class="">
+										<div class="serviceIndi sign_card">
+											<span class="ServTitle">{{ obj.ServiceTitle }}</span><br>
+											<span class="ServDesc">{{ obj.ServiceDescription|truncatechars:100}}</span>
+										</div>
+									</a>
+								</div>
+							</div>
+							{% endfor %}
+
+					    </div>    
 					</div>
+					
+					<div class="clearfix"></div>
+
 				</div><!-- Container /- -->
 			</div><!-- Gallery Section /- -->
 			
 			<!-- Counter Section -->
-			<div class="container-fluid no-left-padding no-right-padding counter-section">
+<!--			<div class="container-fluid no-left-padding no-right-padding counter-section">-->
 				<!-- Container -->
-				<div class="container">
+<!--				<div class="container">-->
 					<!-- Section Header -->
-					<div class="section-header tcp_white">
-						<h3 class="tc_white">OUR achivement</h3>
-						<p>Our pulp Organization is one of the non profit organization near you.</p>
-					</div><!-- Section Header /- -->
+<!--					<div class="section-header tcp_white">-->
+<!--						<h3 class="tc_white">OUR achivement</h3>-->
+<!--						<p>Our pulp Organization is one of the non profit organization near you.</p>-->
+<!--					</div>-->
+					<!-- Section Header /- -->
 					<!-- Row -->
-					<div class="row">
-						<div class="col-md-3 col-sm-4 col-xs-6 counter-box">
-							<div class="counter-detail bg_white">
-								<i class="fa fa-tree tc_green"></i>
-								<span class="tc_dark" id="skill_count-1" data-skills_percent="1258"></span>
-								<h4 class="tc_dove_gray">TREES CUT</h4>
-							</div>
-						</div>
-						<div class="col-md-3 col-sm-4 col-xs-6 counter-box">
-							<div class="counter-detail bg_white">
-								<i class="fa fa-paw tc_green"></i>
-								<span class="tc_dark" id="skill_count-2" data-skills_percent="4695"></span>
-								<h4 class="tc_dove_gray">Animals Lost</h4>
-							</div>
-						</div>
+<!--					<div class="row">-->
+<!--						<div class="col-md-3 col-sm-4 col-xs-6 counter-box">-->
+<!--							<div class="counter-detail bg_white">-->
+<!--								<i class="fa fa-tree tc_green"></i>-->
+<!--								<span class="tc_dark" id="skill_count-1" data-skills_percent="1258"></span>-->
+<!--								<h4 class="tc_dove_gray">TREES CUT</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--						<div class="col-md-3 col-sm-4 col-xs-6 counter-box">-->
+<!--							<div class="counter-detail bg_white">-->
+<!--								<i class="fa fa-paw tc_green"></i>-->
+<!--								<span class="tc_dark" id="skill_count-2" data-skills_percent="4695"></span>-->
+<!--								<h4 class="tc_dove_gray">Animals Lost</h4>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--
 						<div class="col-md-3 col-sm-4 col-xs-6 counter-box">
 							<div class="counter-detail bg_white">
 								<i class="fa fa-leaf tc_green"></i>
@@ -874,9 +828,13 @@
 								<h4 class="tc_dove_gray">Globalization Work</h4>
 							</div>
 						</div>
-					</div><!-- Row /- -->
-				</div><!-- Container /- -->
-			</div><!-- Counter Section /- -->
+-->
+<!--					</div>-->
+					<!-- Row /- -->
+<!--				</div>-->
+				<!-- Container /- -->
+<!--			</div>-->
+			<!-- Counter Section /- -->
 			
 {#			<!-- Latest Events -->#}
 {#			<div class="container-fluid no-left-padding no-right-padding latest-events">#}
@@ -992,42 +950,44 @@
 {#			</div><!-- Latest Events /- -->#}
 			
 			<!-- Testimonials Section 2 -->
-			<div class="container-fluid no-left-padding no-right-padding testimonials-section2 home1-testimonial">
-				<!-- Container -->
-				<div class="container">
-					<!-- Section Header -->
-					<div class="section-header tcp_white">
-						<h3 class="tc_white">testimonials</h3>
-						<p>Our pulp Organization is one of the non profit organization near you.</p>
-					</div><!-- Section Header /- -->
-					<div class="testimonial2-carousel">
-						<div class="col-md-12 item">
-							<div class="testi-box">
-								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>
-								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>
-								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>
-							</div>
-						</div>
-						<div class="col-md-12 item">
-							<div class="testi-box">
-								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>
-								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>
-								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>
-							</div>
-						</div>
-						<div class="col-md-12 item">
-							<div class="testi-box">
-								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>
-								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>
-								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>
-							</div>
-						</div>
-					</div>
-				</div><!-- Container /- -->
+{#			<div class="container-fluid no-left-padding no-right-padding testimonials-section2 home1-testimonial">#}
+{#				<!-- Container -->#}
+{#				<div class="container">#}
+{#					<!-- Section Header -->#}
+{#					<div class="section-header tcp_white">#}
+{#						<h3 class="tc_white">testimonials</h3>#}
+{#						<p>Our pulp Organization is one of the non profit organization near you.</p>#}
+{#					</div><!-- Section Header /- -->#}
+{#					<div class="testimonial2-carousel">#}
+{#						<div class="col-md-12 item">#}
+{#							<div class="testi-box">#}
+{#								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>#}
+{#								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>#}
+{#								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>#}
+{#							</div>#}
+{#						</div>#}
+{#						<div class="col-md-12 item">#}
+{#							<div class="testi-box">#}
+{#								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>#}
+{#								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>#}
+{#								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>#}
+{#							</div>#}
+{#						</div>#}
+{#						<div class="col-md-12 item">#}
+{#							<div class="testi-box">#}
+{#								<i><img src="http://placehold.it/104x104" alt="Testi" /></i>#}
+{#								<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.</p>#}
+{#								<h3 class="tcspan_green tc_dark">Patricia Standard <span>CEO, Founder</span></h3>#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{#				</div><!-- Container /- -->#}
 			</div><!-- Testimonials Section 2 /- -->
+				
+			
 			
 			<!-- Latest Blog -->
-			<div class="container-fluid no-left-padding no-right-padding latest-blog">
+			<div class="container-fluid no-left-padding no-top-padding no-right-padding latest-blog">
 				<!-- Container -->
 				<div class="container">
 					<!-- Section Header -->
@@ -1126,146 +1086,37 @@
 {#				</div><!-- Container /- -->#}
 {#			</div><!-- Callout Section /- -->#}
 			
-			<!-- Client Section -->
-			<div class="container-fluid no-left-padding no-right-padding client-section">
-				<!-- Container -->
-				<div class="container">
-					<!-- Section Header -->
-					<div class="section-header tcp_gray">
-						<h3 class="tc_dark2 tcspan_green">OUR <span>DONORS</span></h3>
-						<p>Our pulp Organization is one of the non profit organization near you.</p>
-					</div><!-- Section Header /- -->
-					<div class="client-carousel">
-						<div class="item">
-							<a href="#"><img src="../static/assets/images/client-logo-1.jpg" alt="Client Logo" /></a>
-						</div>
-						<div class="item">
-							<a href="#"><img src="../static/assets/images/client-logo-2.jpg" alt="Client Logo" /></a>
-						</div>
-						<div class="item">
-							<a href="#"><img src="../static/assets/images/client-logo-3.jpg" alt="Client Logo" /></a>
-						</div>
-						<div class="item">
-							<a href="#"><img src="../static/assets/images/client-logo-4.jpg" alt="Client Logo" /></a>
-						</div>
-						<div class="item">
-							<a href="#"><img src="../static/assets/images/client-logo-5.jpg" alt="Client Logo" /></a>
-						</div>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Client Section /- -->
+			<!--&lt;!&ndash; Client Section &ndash;&gt;-->
+			<!--<div class="container-fluid no-left-padding no-right-padding client-section">-->
+				<!--&lt;!&ndash; Container &ndash;&gt;-->
+				<!--<div class="container">-->
+					<!--&lt;!&ndash; Section Header &ndash;&gt;-->
+					<!--<div class="section-header tcp_gray">-->
+						<!--<h3 class="tc_dark2 tcspan_green">OUR <span>DONORS</span></h3>-->
+						<!--<p>Our pulp Organization is one of the non profit organization near you.</p>-->
+					<!--</div>&lt;!&ndash; Section Header /- &ndash;&gt;-->
+					<!--<div class="client-carousel">-->
+						<!--<div class="item">-->
+							<!--<a href="#"><img src="../static/assets/images/client-logo-1.jpg" alt="Client Logo" /></a>-->
+						<!--</div>-->
+						<!--<div class="item">-->
+							<!--<a href="#"><img src="../static/assets/images/client-logo-2.jpg" alt="Client Logo" /></a>-->
+						<!--</div>-->
+						<!--<div class="item">-->
+							<!--<a href="#"><img src="../static/assets/images/client-logo-3.jpg" alt="Client Logo" /></a>-->
+						<!--</div>-->
+						<!--<div class="item">-->
+							<!--<a href="#"><img src="../static/assets/images/client-logo-4.jpg" alt="Client Logo" /></a>-->
+						<!--</div>-->
+						<!--<div class="item">-->
+							<!--<a href="#"><img src="../static/assets/images/client-logo-5.jpg" alt="Client Logo" /></a>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>&lt;!&ndash; Container /- &ndash;&gt;-->
+			<!--</div>&lt;!&ndash; Client Section /- &ndash;&gt;-->
 			
 		</main>
 
 	</div><!-- Main Container /- -->
 		
-	<!-- Footer Main -->
-	<footer id="footer-main" class="container-fluid no-left-padding no-right-padding footer-main">
-		<!-- Top Footer -->
-		<div class="container-fluid no-left-padding no-right-padding top-footer">
-			<!-- Container -->
-			<div class="container">
-				<!-- Row -->
-				<div class="row">
-
-					<!-- Widget About -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_about">
-							<a href="index.html"><img src="../static/assets/images/logo.png" alt="Logo" /></a>
-							<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.  Pellentesque suscipit ante at ullamcorper. Etiam sit amet fringilla lacus.</p>
-							<aside class="widget widget_social">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-								</ul>
-							</aside>
-						</aside>
-					</div><!-- Widget About /- -->
-
-					<!-- Widget Links -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_contact">
-							<h3 class="widget-title">CONTACT US</h3>
-							<p><i class="fa fa-map-marker"></i> West Mirpur Road, Dhaka, Bangladesh.</p>
-							<p><i class="fa fa-mobile"></i><a href="tel:+880123456789">+ 8801234-56789</a></p>
-							<p><i class="fa fa-envelope"></i><a href="mailto:youremail@mail.com">youremail@mail.com</a></p>
-							<p><i class="fa fa-internet-explorer"></i><a target="_blank" href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
-						</aside>
-					</div><!-- Widget Links /- -->
-
-					<!-- Widget Latest Post -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_latestposts">
-							<h3 class="widget-title">LATEST POSTS</h3>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-						</aside>
-					</div><!-- Widget Latest Post -->
-
-					<!-- Widget Tags -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_latesttweets">
-							<h3 class="widget-title">POPULAR TAGS</h3>
-							<div class="tagcloud">
-								<a href="#" title="Green House">Green House</a>
-								<a href="#" title="Air">Air</a>
-								<a href="#" title="Ecosystem">Ecosystem</a>
-								<a href="#" title="Recycling">Recycling</a>
-								<a href="#" title="Solarsystem">Solarsystem</a>
-								<a href="#" title="Organic">Organic</a>
-								<a href="#" title="Eco">Eco</a>
-								<a href="#" title="Green">Green</a>
-								<a href="#" title="Sun">Sun</a>
-								<a href="#" title="Windmill">Windmill</a>
-							</div>
-						</aside>
-					</div><!-- Widget Tags /- -->
-
-				</div><!-- Row /- -->
-			</div><!-- Container /- -->
-		</div><!-- Top Footer -->
-		<!-- Bottom Footer -->
-		<div class="container-fluid bottom-footer no-left-padding no-right-padding">
-			<!-- Container -->
-			<div class="container">
-				<p>Copyright © 2017  <a href="#">Convergent Technocraft Pvt Ltd</a> </p>
-				<i class="fa fa-header"></i>
-			</div><!-- Container -->
-		</div><!-- Bottom Footer /- -->
-	</footer><!-- Footer Main /- -->
-
-	<!-- JQuery v1.12.4 -->
-	<script src=" {% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
-
-	<!-- Library - Js -->
-	<script src="{% static 'assets/js/lib.js' %}"></script>
-
-	<!-- RS5.3`````` Core JS Files -->
-	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
-
-	<!-- Library - Theme JS -->
-	<script src="{% static 'assets/js/functions.js' %}"></script>
-
-</body>
-</html>
+{% include 'footer.html'%}

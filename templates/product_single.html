@@ -1,0 +1,97 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<title>Home - gplant</title>
+
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/x-icon" href="../static/assets/images//favicon.ico" />
+
+	<!-- For iPhone 4 Retina display: -->
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-114x114-precomposed.png">
+
+	<!-- For iPad: -->
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-72x72-precomposed.png">
+
+	<!-- For iPhone: -->
+	<link rel="apple-touch-icon-precomposed" href="../static/assets/images//apple-touch-icon-57x57-precomposed.png">
+
+	<!-- Library - Google Font Familys -->
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700|Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i|Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/settings.css' %}">
+	<!--link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="assets/revolution/fonts/font-awesome/css/font-awesome.min.css"-->
+
+	<!-- RS5.3 Layers and Navigation Styles -->
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/layers.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/revolution/css/navigation.css' %}">
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/lib.css' %}" >
+
+    <!-- Custom - Common CSS -->
+	<link href="{% static 'assets/css/plugins.css' %} " rel="stylesheet">
+	<link href="{% static 'assets/css/elements.css' %} " rel="stylesheet">
+	<link href="{% static 'assets/css/rtl.css' %}" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Library -->
+
+
+	<!--[if lt IE 9]>
+		<script src="../static/assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+</head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ownavigation">
+	<!-- Loader -->
+	<div id="site-loader" class="load-complete">
+		<div class="loader">
+			<div class="line-scale-pulse-out"><div></div><div></div><div></div><div></div><div></div></div>
+		</div>
+	</div><!-- Loader /- -->
+
+    {% include 'navbar.html' %}
+    
+    <!-- Page Banner -->
+		<div class="container-fluid no-left-padding no-right-padding page-banner productSingle contact-banner">
+			<!-- Container -->
+			<div class="container">
+				<h3 class="tc_white">{{title}}</h3>
+				<ol class="breadcrumb">
+					<li><a class="tc_white tc_white_h" href="index.html">Home</a></li>
+					<li class="active tc_white">Services</li>
+				</ol>
+			</div><!-- Container /- -->
+		</div><!-- Page Banner /- -->
+
+    <div class="container-fluid productText">
+        <div class="col-md-6 text-justify col-md-offset-3 ">
+            <h1>{{title}}</h1>
+            <hr>
+            <p>{{desc|safe}}</p>
+        </div>
+    </div>
+
+    {% include 'footer.html' %}
+
+	

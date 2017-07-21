@@ -46,7 +46,9 @@
 	<link href="{% static 'assets/css/plugins.css' %} " rel="stylesheet">
 	<link href="{% static 'assets/css/elements.css' %} " rel="stylesheet">
 	<link href="{% static 'assets/css/rtl.css' %}" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">n
+
 
 	<!--[if lt IE 9]>
 		<script src="../static/assets/js/html5/respond.min.js"></script>
@@ -63,37 +65,9 @@
 	</div><!-- Loader /- -->
 
 	
-	<!-- Header Section -->
-	<header class="header_s header_s2">
-		<!-- SidePanel -->
-		<div id="slidepanel">
-			
-			<!-- Top Header -->
-			<div class="container-fluid no-right-padding no-left-padding top-header brd_color_green">
-				<!-- Container -->
-				<div class="container">						
-					<div class="top-left">
-						<p class="tc_gray"><i class="fa fa-home"></i>Dhaka, Bangladesh</p>
-						<p><i class="fa fa-phone tc_gray"></i><a class="tc_gray tc_green_h" href="tel:+8801532987039">+ 8801532-987039</a></p>
-					</div>
-					<div class="top-right">
-						<ul>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-google-plus"></i></a></li>
-							<li><a class="tc_dark tc_sugar_h bg_green_h" href="#"><i class="fa fa-vimeo-square"></i></a></li>
-						</ul>
-						<p><i class="fa fa-key tc_dark"></i><a class="tc_dark tc_green_h" href="#" title="Login">Login</a></p>
-						<p><i class="fa fa-user tc_dark"></i><a class="tc_dark tc_green_h" href="#" title="Signup">Signup</a></p>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Top Header /- -->
-			
-		</div><!-- SidePanel /- -->
+
         {% include 'navbar.html' %}
 
-		
-	</header><!-- Header Section /- -->	
 
 	<!-- Main Container -->
 	<div class="main-container">
@@ -114,30 +88,30 @@
 			
 			<!-- About Section -->
 			<div class="container-fluid no-left-padding no-right-padding about-section">
-				<div class="about-img" data-image="http://placehold.it/865x524"fff000></div>
-				<!-- Container -->
+				<div class="col-md-5">
+				    <img src="http://placehold.it/530x530" alt=""><!-- Container -->
+<!--               {%static 'assets/images/handshake.jpg' %}-->
+                </div>
 				<div class="container">
 					<!-- Row -->
 					<div class="row">
-						<div class="col-md-offset-5 col-md-7">
+						<div class="col-md-7">
 							<div class="about-content tcp_gray2">
 								<!-- Section Header -->
 								<div class="section-header tcp_gray">
 									<h3 class="tc_dark">More about us</h3>
-									<p>Our pulp Organization is one of the non profit organization near you.</p>
+									<p>Our belief:</p>
 								</div><!-- Section Header /- -->
-								<p>Our approach of working closely with local communities to develop conservation action plans and sustainable livelihoods offers a real alternative to the destruction of forests for short-term profit. Coming to rely on the protection, rather than exploitation, of forests, these communities become conservation ambassadors, creating a tide of action.</p>
-								<ul>
-									<li class="tc_dark"><i class="fa fa-star tc_green"></i>Trees play such an important role in our environment.</li>
-									<li class="tc_dark"><i class="fa fa-star tc_green"></i>Trees provide so many other benefits.</li>
-									<li class="tc_dark"><i class="fa fa-star tc_green"></i>They absorb harmful carbon dioxide out of the atmosphere.</li>
-									<li class="tc_dark"><i class="fa fa-star tc_green"></i>Their roots prevent erosion by holding the soil intact.</li>
-								</ul>
-								<div class="about-link">
-									<a class="brd_color_dark tc_dark brd_color_green_h bg_green_h tc_white_h" href="#" title="Who We Are">Who We Are</a>
-									<a class="brd_color_dark tc_dark brd_color_green_h bg_green_h tc_white_h" href="#" title="Our Visson">Our Visson</a>
-									<a class="brd_color_dark tc_dark brd_color_green_h bg_green_h tc_white_h" href="#" title="Our History">Our History</a>
-								</div>
+                                <h3><p>Patanjali yoga sutra II.16 : Heyam-Dukham-Anagatam</p> </h3>
+                                    <br>
+                                    <p>
+                                    Heyam: to be avoided <br>
+                                    Dukham: pain, suffering <br>
+                                    Anagatam: which has not yet come
+                                    </p>
+                                    <br>
+                                    <p>The Pain Which Is Yet To Come can Be Avoided </p>
+												
 							</div>
 						</div>
 					</div><!-- Row /- -->
@@ -150,7 +124,7 @@
 				<div class="container">
 					<!-- Section Header -->
 					<div class="section-header tcp_white">
-						<h3 class="tc_white">OUR achivement</h3>
+						<h3 class="tc_white">Our Ach..</h3>
 						<p>Our pulp Organization is one of the non profit organization near you.</p>
 					</div><!-- Section Header /- -->
 					<!-- Row -->
@@ -203,7 +177,7 @@
 						<div class="col-md-7 our-mission-content">
 							<!-- Section Header -->
 							<div class="section-header tcp_gray">
-								<h3 class="tc_dark">our mission</h3>
+								<h3 class="tc_dark">Our Mission</h3>
 								<p>Our pulp Organization is one of the non profit organization near you.</p>
 							</div><!-- Section Header /- -->
 							<div class="our-mission">
@@ -320,7 +294,7 @@
 				<div class="container">
 					<!-- Section Header -->
 					<div class="section-header tcp_gray">
-						<h3 class="tc_dark">volunteers</h3>
+						<h3 class="tc_dark">Acknowledgements</h3>
 						<p>Our pulp Organization is one of the non profit organization near you.</p>
 					</div><!-- Section Header /- -->
 					<!-- Row -->
@@ -359,24 +333,6 @@
 				</div><!-- Container /- -->
 			</div><!-- Team Section /- -->
 			
-			<!-- Callout Section -->
-			<div class="container-fluid no-left-padding no-right-padding callout-section bg_green">
-				<!-- Container -->
-				<div class="container">
-					<div class="col-md-offset-1 col-md-10 col-xs-12">
-						<div class="newsletter-content tcp_white">
-							<h4 class="tc_white">newsletter subscribe</h4>
-							<p>Signup for regular newsletter and stay upto date with our latest news</p>
-							<div class="input-group">
-								<input type="text" class="form-control tc_dove_gray" placeholder="Email address...">
-								<span class="input-group-btn">
-									<button class="btn btn-default bg_dark2 tc_white tc_dark2_h bg_white_h" type="button">submit</button>
-								</span>
-							</div><!-- /input-group -->
-						</div>
-					</div>
-				</div><!-- Container /- -->
-			</div><!-- Callout Section /- -->
 			
 			<!-- Client Section -->
 			<div class="container-fluid no-left-padding no-right-padding client-section">
@@ -384,7 +340,7 @@
 				<div class="container">
 					<!-- Section Header -->
 					<div class="section-header tcp_gray">
-						<h3 class="tc_dark2 tcspan_green">OUR <span>DONORS</span></h3>
+						<h3 class="tc_dark2 tcspan_green">OUR HAPPY AND SUCCESFUL<span> CLIENTS</span></h3>
 						<p>Our pulp Organization is one of the non profit organization near you.</p>
 					</div><!-- Section Header /- -->
 					<div class="client-carousel">
@@ -411,114 +367,4 @@
 
 	</div><!-- Main Container /- -->
 		
-	<!-- Footer Main -->
-	<footer id="footer-main" class="container-fluid no-left-padding no-right-padding footer-main">
-		<!-- Top Footer -->
-		<div class="container-fluid no-left-padding no-right-padding top-footer">
-			<!-- Container -->
-			<div class="container">
-				<!-- Row -->
-				<div class="row">
-				
-					<!-- Widget About -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_about">
-							<a href="index.html"><img src="../static/assets/images/logo.png" alt="Logo" /></a>
-							<p>Etiam sit amet fringilla lacus. Pellentesque suscipit ante at ullamcorper pulvinar neque porttitor. Fermentum orci amet.  Pellentesque suscipit ante at ullamcorper. Etiam sit amet fringilla lacus.</p>
-							<aside class="widget widget_social">
-								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
-								</ul>
-							</aside>
-						</aside>
-					</div><!-- Widget About /- -->
-					
-					<!-- Widget Links -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_contact">
-							<h3 class="widget-title">CONTACT US</h3>
-							<p><i class="fa fa-map-marker"></i> West Mirpur Road, Dhaka, Bangladesh.</p>
-							<p><i class="fa fa-mobile"></i><a href="tel:+880123456789">+ 8801234-56789</a></p>
-							<p><i class="fa fa-envelope"></i><a href="mailto:youremail@mail.com">youremail@mail.com</a></p>
-							<p><i class="fa fa-internet-explorer"></i><a target="_blank" href="http://www.yourwebsite.com">www.yourwebsite.com</a></p>
-						</aside>
-					</div><!-- Widget Links /- -->
-					
-					<!-- Widget Latest Post -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_latestposts">
-							<h3 class="widget-title">LATEST POSTS</h3>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-							<div class="latest-content">
-								<a href="#" title="Recent Posts"><i><img src="http://placehold.it/70x67" class="wp-post-image" alt="blog-1"></i></a>
-								<h5><a title="Pellentesque suscipit ante at" href="#">Pellentesque suscipit ante at</a></h5>
-								<span><i class="fa fa-calendar-check-o"></i><a href="#">10 Jun, 2017 </a></span>
-							</div>
-						</aside>
-					</div><!-- Widget Latest Post -->
-					
-					<!-- Widget Tags -->
-					<div class="col-md-3 col-sm-6 col-xs-6">
-						<aside class="widget widget_latesttweets">
-							<h3 class="widget-title">POPULAR TAGS</h3>
-							<div class="tagcloud">
-								<a href="#" title="Green House">Green House</a>
-								<a href="#" title="Air">Air</a>
-								<a href="#" title="Ecosystem">Ecosystem</a>
-								<a href="#" title="Recycling">Recycling</a>
-								<a href="#" title="Solarsystem">Solarsystem</a>
-								<a href="#" title="Organic">Organic</a>
-								<a href="#" title="Eco">Eco</a>
-								<a href="#" title="Green">Green</a>
-								<a href="#" title="Sun">Sun</a>
-								<a href="#" title="Windmill">Windmill</a>									
-							</div>
-						</aside>
-					</div><!-- Widget Tags /- -->
-					
-				</div><!-- Row /- -->
-			</div><!-- Container /- -->
-		</div><!-- Top Footer -->
-		<!-- Bottom Footer -->
-		<div class="container-fluid bottom-footer no-left-padding no-right-padding">
-			<!-- Container -->
-			<div class="container">
-				<p>Copyright © 2017 This <a href="#">gplent PSD Template</a> Design by Onista</p>
-				<i class="fa fa-header"></i>					
-			</div><!-- Container -->
-		</div><!-- Bottom Footer /- -->
-	</footer><!-- Footer Main /- -->
-	
-	<!-- JQuery v1.12.4 -->
-	<script src=" {% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
-
-	<!-- Library - Js -->
-	<script src="{% static 'assets/js/lib.js' %}"></script>
-
-	<!-- RS5.3`````` Core JS Files -->
-	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.video.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.slideanims.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.layeranimation.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.navigation.min.js' %}"></script>
-	<script type="text/javascript" src="{% static 'assets/revolution/js/extensions/revolution.extension.actions.min.js' %}"></script>
-
-	<!-- Library - Theme JS -->
-	<script src="{% static 'assets/js/functions.js' %}"></script>
-
-	
-</body>
-</html>
+{% include 'footer.html'%}
