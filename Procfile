@@ -1,1 +1,1 @@
-web: python drjayashree.wsgi
+web: gunicorn drjayashree.wsgi
