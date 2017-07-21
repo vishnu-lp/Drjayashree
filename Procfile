@@ -1,1 +1,1 @@
-web: python drjayshree.wsgi
+web: python drjayashree.wsgi
